@@ -1,0 +1,13 @@
+input CreatePostInput {
+    title: String!
+    content: String!
+    type: PostType!
+    contentMode: InputContentMode!
+    communityId: ID!
+}
+
+input QueryPostInput {
+    limit: Int @binding(constraint: "numeric")
+    page: Int @binding(constraint: "numeric")
+    sort: SortPostEnum
+}

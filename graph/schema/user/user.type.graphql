@@ -1,0 +1,32 @@
+type User {
+    id: ID!
+    username: String!
+    email: String
+    avatar: String
+    createdAt: String!
+    updatedAt: String!
+}
+
+type UserAction {
+    id: ID!
+    type: UserActionType!
+    target: ID!
+    targetType: UserActionTargetType!
+    createdAt: String!
+    updatedAt: String!
+}
+
+enum UserActionType {
+    UpVote
+    DownVote
+}
+
+enum UserActionTargetType {
+    POST
+    COMMENT
+}
+
+enum GENDER {
+    MALE
+    FEMALE
+}
